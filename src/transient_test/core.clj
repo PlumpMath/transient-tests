@@ -7,12 +7,12 @@
 (defn run-test-persistent []
   (let [coll {}]
     (dotimes [x 10000]
-      (assoc coll x x))))
+      (assoc coll 1 x))))
 
 (defn run-test-transient []
   (let [coll (transient {})]
     (dotimes [x 10000]
-      (assoc! coll x x))))
+      (assoc! coll 1 x))))
 
 
 (defn  -main []
